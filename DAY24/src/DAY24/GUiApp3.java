@@ -1,42 +1,38 @@
 package DAY24;
 
-import java.applet.Applet;
-import java.awt.Button;
-import java.awt.TextField;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
-public class GUiApp3 extends Applet{
-	Button b1,b2;
-	TextField t;
+public class GUiApp3 extends Frame {
+	int[] x;
+	int[] y;
+	int i;
+	public GUiApp3() {
+		x = new int[7];
+		y = new int[7];
+		for(i = 0; i<x.length; i++) {
+			x[i] = (int)(400* Math.random());
+			y[i] = (int)(400*Math.random());
+		}
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
+		setSize(500,500);
+		setVisible(true);
+	}
 	
-	public void init() {
-		add(b1 = new Button("Click"));
-		add(t = new TextField(15));
-		add(b2 = new Button("Clear"));
-		b1.addFocusListener(new FocusAdapter() {
-            @Override
-			public void focusGained(FocusEvent e) {
-				// TODO Auto-generated method stub
-				t.setText("Hello World");
-			}
-			
-		});
-		b2.addFocusListener(new FocusListener() {
+	public void paint(Graphics g) {
+		g.drawPolygon(x, y, 5);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new ArrayDemo1();
 
-			public void focusGained(FocusEvent e) {
-				// TODO Auto-generated method stub
-				t.setText("");
-			}
-
-			public void focusLost(FocusEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-		});
-		
 	}
 
 }
