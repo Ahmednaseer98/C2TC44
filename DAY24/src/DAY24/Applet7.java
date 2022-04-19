@@ -1,4 +1,4 @@
-package com.applet;
+package DAY24;
 
 import java.applet.Applet;
 import java.awt.event.MouseEvent;
