@@ -1,4 +1,5 @@
-import java.awt.Button;
+package DAY36;
+
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -8,24 +9,24 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class Applet5 extends Frame
+public class Appication4 extends Frame
 {
 	Button b1, b2;
 	TextField t;
 	
-	public Applet5()
+	public Appication4()
 	{
 		setLayout(new FlowLayout());
 		
 		add(b1 = new Button(" Click "));
-		add(t = new TextField(15));
+		add(t = new TextField(20));
 		add(b2 = new Button(" Clear "));
 		
 		b1.addActionListener(new ActionListener()		
 		{														
 			public void actionPerformed(ActionEvent e)
 			{
-				t.setText(" Hello world");
+				t.setText(" Helloworld");
 			}
 		} );
 		b2.addActionListener(new ActionListener()		
@@ -43,13 +44,13 @@ public class Applet5 extends Frame
 			{
 				System.exit(0);
 			}
-		});
+});
 		
 		setSize(300, 300);
 		setVisible(true);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new Applet5();
+		new Appication4();
 	}
 }

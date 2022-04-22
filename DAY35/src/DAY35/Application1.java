@@ -10,10 +10,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class Applet1 extends Frame implements ActionListener{
+public class Application1 extends Frame implements ActionListener{
 	Button b1,b2;
 	TextField t;
-	public Applet1() {
+	public Application1() {
 		setLayout(new FlowLayout());
 		add(b1= new Button("Click"));
 		add(t = new TextField(15));
@@ -23,7 +23,7 @@ public class Applet1 extends Frame implements ActionListener{
 		addWindowListener(new WindowAdapter()
 				{
 			@Override
-			public void Windowclosing(WindowEvent e)
+			public void windowClosing(WindowEvent e)
 			{
 				System.exit(0);
 			}
@@ -32,7 +32,7 @@ public class Applet1 extends Frame implements ActionListener{
 		setVisible(true);
 	}
 	public static void main(String[] args) {
-		new Applet1();
+		new Application1();
 	}
 	@Override
 	public  void actionPerformed(ActionEvent e) {
