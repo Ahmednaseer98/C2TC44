@@ -1,8 +1,8 @@
-//Program with synchronization problem
+//Program with solution 
 package DAY40;
 
 class TContent{
-	public  void m1(String s)
+	public synchronized void m1(String s)
 	{
 		System.out.println("{");
 		System.out.println(s);
